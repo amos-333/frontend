@@ -9,6 +9,18 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  email=""
+  password=""
+
+  loginClicked(){
+    let user={
+      email:this.email,
+      password:this.password,
+    }
+    console.log(user);
+    
+
+  }
   ngOnInit(): void {
   }
 

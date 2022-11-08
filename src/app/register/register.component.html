@@ -1,51 +1,84 @@
 <app-navbar></app-navbar>
 <div class="bg">
-    <div class="container ">
-        <div class="row">
-            <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 "> </div>
-            <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 "> </div>
-            <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <div class="row g-3">
-                    <form action="" class=" mt-5 p-5 border border-secondary rounded form">
-                                
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingName" placeholder="name@example.com">
-                            <label for="floatingName">Name</label>
-                          </div>
-                          
-                          <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingemail" placeholder="name@example.com">
-                            <label for="floatingemail">Email address</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingaddress" placeholder="Password">
-                            <label for="floatingaddress">Address</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="" class="form-control" id="floatingphone" placeholder="Password">
-                            <label for="floatingPhone">Phone Number</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingPassword" placeholder="name@example.com">
-                            <label for="floatingPassword">Password</label>
-                          </div>
-                          <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingconfirm" placeholder="Password">
-                            <label for="floatingconfirm">Confirm Password</label>
-                          </div>
-                          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+      ></div>
+      <div
+        class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+      ></div>
+      <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <div class="row g-3">
+          <form action="" class="mt-5 p-5 border border-secondary rounded form" (ngSubmit)="submitClicked()">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                [(ngModel)]="name"
+                class="form-control"
+                id="floatingName"
+                placeholder="name@example.com"
+                name="name"
+              />
+              <label for="floatingName">Name</label>
             </div>
 
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                [(ngModel)]="email"
+                class="form-control"
+                id="floatingemail"
+                placeholder="name@example.com"
+                name="email"
+              />
+              <label for="floatingemail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                [(ngModel)]="address"
+                class="form-control"
+                id="floatingaddress"
+                placeholder="Password"
+                name="address"
+              />
+              <label for="floatingaddress">Address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type=""
+                [(ngModel)]="phone"
+                class="form-control"
+                id="floatingphone"
+                placeholder="Phone Number"
+                name="phone"
+              />
+              <label for="floatingPhone">Phone Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                [(ngModel)]="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="password"
+                name="password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <!-- <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingconfirm" placeholder="Password">
+                            <label for="floatingconfirm">Confirm Password</label>
+                          </div> -->
+            <div
+              class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+            >
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </form>
         </div>
-
-
+      </div>
     </div>
-
-
-
-
+  </div>
 </div>
