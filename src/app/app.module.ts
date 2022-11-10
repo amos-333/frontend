@@ -12,6 +12,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './product/product.component';
 import {FormsModule} from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { CaraddComponent } from './caradd/caradd.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HotdealsComponent } from './hotdeals/hotdeals.component';
+import { RecentaddComponent } from './recentadd/recentadd.component';
+import { UpdatesComponent } from './updates/updates.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +29,12 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     ProductComponent,
     FooterComponent,
+    CaraddComponent,
+    DashboardComponent,
+    HotdealsComponent,
+    RecentaddComponent,
+    UpdatesComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
