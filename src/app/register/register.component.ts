@@ -11,11 +11,11 @@ export class RegisterComponent implements OnInit {
 
   constructor(private auth:AuthService,private router:Router) { }
 
-  name=""
-  email=""
-  address=""
-  phone=""
-  password=""
+  name="";
+  email="";
+  address="";
+  phone="";
+  password="";
 
   submitClicked(){
     let user={

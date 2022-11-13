@@ -18,6 +18,12 @@ import { HotdealsComponent } from './hotdeals/hotdeals.component';
 import { RecentaddComponent } from './recentadd/recentadd.component';
 import { UpdatesComponent } from './updates/updates.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { ViewcarouselComponent } from './viewcarousel/viewcarousel.component';
+import { ViewhotdealsComponent } from './viewhotdeals/viewhotdeals.component';
+import { ViewrecentComponent } from './viewrecent/viewrecent.component';
+import { ViewupdatesComponent } from './viewupdates/viewupdates.component';
+
 
 @NgModule({
   declarations: [
@@ -35,11 +41,17 @@ import { CarouselComponent } from './carousel/carousel.component';
     RecentaddComponent,
     UpdatesComponent,
     CarouselComponent,
+    ViewproductComponent,
+    ViewcarouselComponent,
+    ViewhotdealsComponent,
+    ViewrecentComponent,
+    ViewupdatesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    
     HttpClientModule
   
   ],

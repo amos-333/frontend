@@ -11,6 +11,11 @@ import { ProductComponent } from './product/product.component';
 import { RecentaddComponent } from './recentadd/recentadd.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdatesComponent } from './updates/updates.component';
+import { ViewcarouselComponent } from './viewcarousel/viewcarousel.component';
+import { ViewhotdealsComponent } from './viewhotdeals/viewhotdeals.component';
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { ViewrecentComponent } from './viewrecent/viewrecent.component';
+import { ViewupdatesComponent } from './viewupdates/viewupdates.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,9 +32,15 @@ const routes: Routes = [
       { path: 'recentadd', component: RecentaddComponent },
       { path: 'updates', component: UpdatesComponent },
       { path: 'carousel', component: CarouselComponent },
+      { path: 'viewproduct', component: ViewproductComponent },
+      { path: 'viewhotdeals', component: ViewhotdealsComponent },
+      { path: 'viewcarousel', component: ViewcarouselComponent },
+      { path: 'viewupdates', component: ViewupdatesComponent },
+      { path: 'viewrecent', component: ViewrecentComponent },
     ],
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

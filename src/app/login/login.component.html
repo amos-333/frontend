@@ -1,32 +1,50 @@
 <app-navbar></app-navbar>
+
 <div class="bglogin">
-    <div class="container">
-       <div class="row" >
-       
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-               <div >
-                   <form action="" class=" mt-5 p-5 border border-secondary rounded form" (ngSubmit)="loginClicked()">
-                   <div class="form-floating mb-3">
-                       <input type="email"  class="form-control" id="floatingemail"  [(ngModel)]="email" placeholder="name@example.com" name="email" >
-                       <label for="floatingemail">Email address</label>
-                     </div>
-                     <br>
-                     <div class="form-floating mb-3">
-                       <input type="password" class="form-control" id="floatingPassword" [(ngModel)]="password" placeholder="name@example.com" name="password">
-                       <label for="floatingPassword">Password</label>
-                     </div>
-                     <button class="btn btn-primary">Submit</button>
-                   
-                   
-               </form>
-            </div>
-            
-           </div>
-       
-   
-       </div>
-   
-   </div>
-   
-   
-   </div>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+      ></div>
+     
+      <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <div class="row g-3">
+  <form
+    action=""
+    class="mt-5 p-5 border border-secondary rounded form"
+    type=""
+    (ngSubmit)="loginClicked()"
+  >
+    <div class="form-floating mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingemail"
+        [(ngModel)]="email"
+        placeholder="name@example.com"
+        name="email"
+      />
+      <label for="floatingemail">Email address</label>
+    </div>
+    <br />
+    <div class="form-floating mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        [(ngModel)]="password"
+        placeholder="name@example.com"
+        name="password"
+      />
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<div
+class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+></div>
+</div>
+</div>
+</div>
+</div>

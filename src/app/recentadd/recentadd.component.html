@@ -1,39 +1,48 @@
 <!-- Recently Added Files -->
 <div class="container">
     <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row g-3">
-                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                    <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                    <label for="" class="form-label">Model</label>
-                    <input type="date" class="form-control" name="model">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                    <label for="" class="form-label">Price</label>
-                    <input type="number" class="form-control" name="price">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                    <label for="" class="form-label">Description</label>
-                    <input type="number" class="form-control" name="description">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                    <label for="" class="form-label">Images</label>
-                    <input type="text" class="form-control" name="images">
-                    
-                </div>
-                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                    <label for="" class="form-label">company</label>
-                    <input type="text" class="form-control" name="company">
-                    
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn-primary">Submit</button>
-                </div>
-            </div>
+      <form class="mt-5 p-5 border border-secondary rounded" (ngSubmit)="recents()">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="row g-3" >
+          <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <label for="" class="form-label">Name</label>
+            <input type="text" [(ngModel)]="name" class="form-control" name="name" />
+          </div>
+          <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <label for="" class="form-label">Model</label>
+            <input type="date" [(ngModel)]="model" class="form-control" name="model" />
+          </div>
+          <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <label for="" class="form-label">Price</label>
+            <input type="number" [(ngModel)]="price" class="form-control" name="price" />
+          </div>
+          <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <label for="" class="form-label">Description</label>
+            <input type="text" [(ngModel)]="description" class="form-control" name="description" />
+          </div>
+          <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <label for="" class="form-label">Images</label>
+            <input type="file" [(ngModel)]="images" class="form-control" name="images" />
+          </div>
+          <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <label for="" class="form-label">company</label>
+            <input type="text" [(ngModel)]="company" class="form-control" name="company" />
+          </div>
+          <div *ngIf="isError" class="error" >
+            <p>Error found</p>
         </div>
+        <div *ngIf="!isError && isChange" class="success" >
+            <p>Successfully Added</p>
+        </div>
+          <div
+            class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+          >
+  
+            <button class="btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
     </div>
-</div>
-
+  </div>
+  
