@@ -17,7 +17,7 @@ export class HotdealsComponent implements OnInit {
     model='';
     description='';
     company='';
-
+tag=''
     hotdeals= ()=>{
       let user={
 
@@ -26,12 +26,13 @@ export class HotdealsComponent implements OnInit {
         model:this.model,
         description:this.description,
         company:this.company,
-        price:this.price
+        price:this.price,
+        tag:this.tag
       };  
       
-      this.auth.hotdeals(user).subscribe((res:any)=>{
+      this.auth.addProduct(user).subscribe((res:any)=>{
 
-        console.log(res['status']);
+        console.log(res);
         if (res.status === 'error') {
           // alert('something went wrong')
           this.isError=true

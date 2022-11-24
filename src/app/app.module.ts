@@ -23,6 +23,7 @@ import { ViewcarouselComponent } from './viewcarousel/viewcarousel.component';
 import { ViewhotdealsComponent } from './viewhotdeals/viewhotdeals.component';
 import { ViewrecentComponent } from './viewrecent/viewrecent.component';
 import { ViewupdatesComponent } from './viewupdates/viewupdates.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { ViewupdatesComponent } from './viewupdates/viewupdates.component';
     ViewhotdealsComponent,
     ViewrecentComponent,
     ViewupdatesComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

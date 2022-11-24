@@ -22,11 +22,15 @@
           </div>
           <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
             <label for="" class="form-label">Images</label>
-            <input type="file" [(ngModel)]="images" class="form-control" name="images" />
+            <input type="text" [(ngModel)]="images" placeholder="image address" class="form-control" name="images" />
           </div>
           <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
             <label for="" class="form-label">company</label>
             <input type="text" [(ngModel)]="company" class="form-control" name="company" />
+          </div>
+          <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <label for="" class="form-label">tag</label>
+            <input type="text" [(ngModel)]="tag" class="form-control" name="company" />
           </div>
           <div *ngIf="isError" class="error" >
             <p>Error found</p>
@@ -38,7 +42,7 @@
             class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
           >
   
-            <button class="btn-primary">Submit</button>
+            <button class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>

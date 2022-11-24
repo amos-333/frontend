@@ -12,7 +12,7 @@ export class ViewhotdealsComponent implements OnInit {
     this.fetchData()
    }
   fetchData=()=>{
-    this.auth.viewhotdeals().subscribe((res)=>{
+    this.auth.viewhotdeals({}).subscribe((res)=>{
        this.data = res.data 
        console.log(this.data)
      })

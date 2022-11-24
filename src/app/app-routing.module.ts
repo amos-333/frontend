@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CaraddComponent } from './caradd/caradd.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { HotdealsComponent } from './hotdeals/hotdeals.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'product', component: ProductComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'checkout', component: CheckoutComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
