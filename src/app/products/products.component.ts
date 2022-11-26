@@ -1,28 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AuthService } from '../service/auth.service';
 
 @Component({
-  selector: 'app-caradd',
-  templateUrl: './caradd.component.html',
-  styleUrls: ['./caradd.component.css']
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css']
 })
-export class CaraddComponent implements OnInit {
+export class ProductsComponent implements OnInit {
 
   constructor(private auth:AuthService,) { }
 
-  ngOnInit(): void {
-  }
-
-
-    name='';
+  name='';
     price='';
     images='';
     model='';
     description='';
     company='';
-
-    addCar= ()=>{
+    tag=''
+    products= ()=>{
       let user={
 
         name:this.name,
@@ -30,13 +25,14 @@ export class CaraddComponent implements OnInit {
         model:this.model,
         description:this.description,
         company:this.company,
-        price:this.price
+        price:this.price,
+        tag:this.tag
       };  
       
-      this.auth.addCar(user).subscribe((res:any)=>{
+      this.auth.addProduct(user).subscribe((res:any)=>{
 
-        console.log(res['status']);
-        if (res.status === 'error') {     
+        console.log(res);
+        if (res.status === 'error') {
           // alert('something went wrong')
           this.isError=true
         } else {
@@ -65,6 +61,7 @@ export class CaraddComponent implements OnInit {
 
 
 
- 
+  ngOnInit(): void {
+  }
 
 }

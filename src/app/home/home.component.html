@@ -108,29 +108,29 @@
 
       <br />
 
-      <h2>Necently Added</h2>
+      <h2>Recently Added</h2>
       <div class="container mt-5">
         <div class="row">
-          <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbnhfLmPcHAAMz2gGGD8C-7cjM8CA58CXjw&usqp=CAU"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div
+            *ngFor="let recents of recentsData"
+            class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3"
+          >
+            <a routerLink="/product/{{recents._id}}" class="productCard">
+              <div class="card" style="width: 18rem">
+                <img src="{{ recents.images }}" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">{{ recents.name }}</h5>
+                  <p class="card-text">price:{{ recents.price }}</p>
+                  <a href="#" class="btn btn-primary">add to cart</a>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
+    
 
           <br />
           <br />
+
           <!-- advertisements -->
           <div class="row">
             <div

@@ -13,13 +13,13 @@ export class ViewproductComponent implements OnInit {
    }
   fetchData=()=>{
     this.auth.viewproducts().subscribe((res)=>{
+      console.log(this.data)
        this.data = res.data 
-       console.log(this.data)
      })
    };
  
    ngOnInit(): void {};
-   data :any=[];
+   data :any;
    
 
        deleteEvent=(id:any)=>{
