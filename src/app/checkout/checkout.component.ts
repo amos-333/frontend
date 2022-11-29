@@ -41,7 +41,7 @@ export class CheckoutComponent implements OnInit {
     this.auth.checkoutOrder(details).subscribe((res) => {
       if (res.CODsuccess) {
         console.log('codsuccess');
-        this.router.navigate(['/'])
+        this.router.navigate(['/orderplaced'])
       } else {
         console.log(res.order);
 
@@ -89,8 +89,9 @@ export class CheckoutComponent implements OnInit {
 
     this.auth.verifyPayment(data).subscribe((res) => {
       if (res.success==true) {
-        
+        this.router.navigate(['/orderplaced'])
       } else {
+        console.log("payment failed");
         
       }
     });

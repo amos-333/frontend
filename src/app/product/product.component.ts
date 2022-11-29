@@ -26,6 +26,7 @@ export class ProductComponent implements OnInit {
       userId:localStorage.getItem('user_id'),
       productId:productId
     }
+    
     console.log(details);
     
     this.auth.addCart(details).subscribe(res=>{
@@ -34,6 +35,7 @@ export class ProductComponent implements OnInit {
       console.log(res);
       
     })
+    alert('added successfully')
   }
 
   product: any;

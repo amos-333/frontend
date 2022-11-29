@@ -20,6 +20,7 @@ import { ViewcarouselComponent } from './viewcarousel/viewcarousel.component';
 import { ViewupdatesComponent } from './viewupdates/viewupdates.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductsComponent } from './products/products.component';
+import { OrderplacedComponent } from './orderplaced/orderplaced.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { ProductsComponent } from './products/products.component';
     ViewupdatesComponent,
     CheckoutComponent,
     ProductsComponent,
+    OrderplacedComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
+	position: relative;
 }
 
 .footer-distributed .footer-left,

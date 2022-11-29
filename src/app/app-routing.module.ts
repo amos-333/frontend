@@ -6,6 +6,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { OrderplacedComponent } from './orderplaced/orderplaced.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'orderplaced', component:OrderplacedComponent },
   { path: 'cart', component: CartComponent },
   { path: 'product/:id', component: ProductComponent },
   { path: 'checkout', component: CheckoutComponent },
