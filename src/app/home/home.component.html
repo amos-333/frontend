@@ -87,7 +87,49 @@
   <br />
   <!-- CARD PRODUCTS -->
   <h2>Hot deals</h2>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let hotdeals of hotDealsdata" class="col col-12 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+<div class="card" style="width: 18rem">
 
+  <div class="container page-wrapper">
+    <div class="page-inner">
+      <div class="row">
+        <div class="el-wrapper">
+          <div class="box-up">
+            <img class="img" src="{{ hotdeals.images }}" alt="">
+            <div class="img-info">
+              <div class="info-inner">
+                <span class="p-name">{{ hotdeals.name }}</span>
+                <span class="p-company"></span> 
+              </div>
+               <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div> 
+            </div>
+          </div>
+  
+          <div class="box-down">
+            <div class="h-bg">
+              <div class="h-bg-inner"></div>
+            </div>
+  
+            <a class="cart" routerLink="/product/{{hotdeals._id}}">
+              <span class="price">₹ {{ hotdeals.price }}</span>
+              <span class="add-to-cart">
+                <span class="txt">Add to cart</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+       
+    </div>
+</div>
+
+
+<!-- 
   <div class="container mt-5">
     <div class="row">
       <div
@@ -104,10 +146,11 @@
             </div>
           </div>
         </a>
-      </div>
+      </div>   -->
 
       <br />
 
+      <!-- RECENTLY ADDED -->
       <h2>Recently Added</h2>
       <div class="container mt-5">
         <div class="row">
