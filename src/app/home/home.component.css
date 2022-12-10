@@ -15,6 +15,10 @@ body,
 html {
   height: 100%;
 }
+.img{
+  height: 20em;
+  width: 17em;
+}
 
 .d-flex {
   display: -webkit-box;
@@ -77,7 +81,7 @@ body {
 }
 
 .el-wrapper:hover .price {
-  left: 20px;
+  left: 10px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
@@ -89,10 +93,10 @@ body {
   left: 50%;
 }
 
-.el-wrapper:hover .img {
+/* .el-wrapper:hover .img {
  height: 10em;
  width: 20em;
-}
+} */
 
 .el-wrapper:hover .info-inner {
   bottom: 155px;

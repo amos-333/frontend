@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guard/auth.guard';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -19,10 +20,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'orderplaced', component:OrderplacedComponent },
+  { path: 'orderplaced', component: OrderplacedComponent },
   { path: 'cart', component: CartComponent },
   { path: 'product/:id', component: ProductComponent },
-  { path: 'checkout', component: CheckoutComponent },
+  { path: 'checkout',canActivate:[AuthGuard], component: CheckoutComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -36,7 +37,6 @@ const routes: Routes = [
     ],
   },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -5,38 +5,31 @@ import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  constructor(private auth: AuthService, private router: Router) {}
 
-  constructor(private auth:AuthService,private router : Router) { }
+  email = '';
+  password = '';
 
-  email=""
-  password=""
-
-  loginClicked(){
-    let user={
-      email:this.email,
-      password:this.password,
-    }
+  loginClicked() {
+    let user = {
+      email: this.email,
+      password: this.password,
+    };
     console.log(user);
-    this.auth.login(user).subscribe(res=>{
-      console.log(res)
-if (res.success) {
-  localStorage.setItem('token_id', res.token);
+    this.auth.login(user).subscribe((res) => {
+      console.log(res);
+      if (res.success) {
+        localStorage.setItem('token_id', res.token);
         localStorage.setItem('user_id', res.user.id);
         localStorage.setItem('isAdmin', res.isAdmin);
         this.router.navigate(['/']);
-} else {
-  console.log("authentication failed");
-  
-}
-    })
-    
-
-
+      } else {
+        console.log('authentication failed');
+      }
+    });
   }
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

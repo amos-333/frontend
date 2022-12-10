@@ -1,31 +1,54 @@
 <nav class="navbar navbar-expand-lg bg-black">
-    <div class="container-fluid">
-      <a class="navbar-brand" style="color:aliceblue" routerLink="/" routerLinkActive="router-link-active" >Dunbee</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav" >
-          
-          <li class="nav-item">
-            <a class="nav-link " style="color:aliceblue" routerLink="/cart">Cart </a>
-          </li>
-          <!-- <li class="nav-item">
+  <div class="container-fluid">
+    <a
+      class="navbar-brand"
+      style="color: aliceblue"
+      routerLink="/"
+      routerLinkActive="router-link-active"
+      >Dunbee</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" style="color: aliceblue" *ngIf="auth.loggedIn() && !auth.isAdmin()" routerLink="/cart"
+            >Cart
+          </a>
+        </li>
+        <!-- <li class="nav-item">
             <a class="nav-link " style="color:aliceblue" routerLink="/product">products </a>
           </li> -->
-          <li class="nav-item">
-            <a class="nav-link " style="color:aliceblue" routerLink="/dashboard">dashboard</a>
-          </li>
-          <li class="nav-item login">
-            <a class="nav-link  " style="color:aliceblue" routerLink="/login">login</a>
-          </li>
-          <li class="nav-item signup">
-            <a class="nav-link  " style="color:aliceblue" routerLink="/register">sign up</a>
-          </li> 
-          <li class="nav-item logout">
-            <a class="nav-link  " style="color:aliceblue" (click)="logOutClick()">log out</a>
-          </li> 
-        </ul>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" style="color: aliceblue" *ngIf="auth.loggedIn() && auth.isAdmin()"  routerLink="/dashboard"
+            >dashboard</a
+          >
+        </li>
+        <li class="nav-item login">
+          <a class="nav-link" style="color: aliceblue" *ngIf="!auth.loggedIn()" routerLink="/login"
+            >login</a
+          >
+        </li>
+        <li class="nav-item signup">
+          <a class="nav-link" style="color: aliceblue" *ngIf="!auth.loggedIn()" routerLink="/register"
+            >sign up</a
+          >
+        </li>
+        <li class="nav-item logout">
+          <a class="nav-link" style="color: aliceblue" *ngIf="auth.loggedIn()" (click)="logOutClick()"
+            >log out</a
+          >
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,8 @@ import { ViewupdatesComponent } from './viewupdates/viewupdates.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductsComponent } from './products/products.component';
 import { OrderplacedComponent } from './orderplaced/orderplaced.component';
+import { AuthService } from './service/auth.service';
+import { TokenInterceptorService } from './service/token-interceptor.service';
 
 
 @NgModule({
@@ -51,7 +53,12 @@ import { OrderplacedComponent } from './orderplaced/orderplaced.component';
     HttpClientModule
   
   ],
-  providers: [],
+  providers: [AuthService,
+  {
+    provide:HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

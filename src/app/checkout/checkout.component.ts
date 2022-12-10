@@ -16,7 +16,7 @@ export class CheckoutComponent implements OnInit {
     phone: '',
   };
 
-  constructor(private auth: AuthService,private router:Router) {
+  constructor(private auth: AuthService, private router: Router) {
     let userId = { userId: localStorage.getItem('user_id') };
     auth.totalAmount(userId).subscribe((res) => {
       this.total = res.total[0].totalAmount ?? 0;
@@ -41,7 +41,7 @@ export class CheckoutComponent implements OnInit {
     this.auth.checkoutOrder(details).subscribe((res) => {
       if (res.CODsuccess) {
         console.log('codsuccess');
-        this.router.navigate(['/orderplaced'])
+        this.router.navigate(['/orderplaced']);
       } else {
         console.log(res.order);
 
@@ -88,11 +88,10 @@ export class CheckoutComponent implements OnInit {
     };
 
     this.auth.verifyPayment(data).subscribe((res) => {
-      if (res.success==true) {
-        this.router.navigate(['/orderplaced'])
+      if (res.success == true) {
+        this.router.navigate(['/orderplaced']);
       } else {
-        console.log("payment failed");
-        
+        console.log('payment failed');
       }
     });
   }

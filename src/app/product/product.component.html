@@ -5,7 +5,7 @@
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
       <div class="row g-3">
         <div class="col col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-          <H1>{{product.name}}</H1>
+          <H1>{{ product.name }}</H1>
 
           <div>
             <img
@@ -14,16 +14,12 @@
               alt="..."
             />
           </div>
-         
         </div>
         <div class="col col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
           <div class="container">
-            <h4>price:${{product.price}}</h4>
+            <h4>price:${{ product.price }}</h4>
             <h4>description:</h4>
-            <P>{{product.description}}
-
-             </P
-            >
+            <P>{{ product.description }} </P>
             <h4>specs:</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ut
@@ -31,8 +27,13 @@
               facilis labore porro maiores inventore consequatur modi?
               Voluptates maxime voluptas nihil?
             </p>
-            
-            <button class="btn btn-primary" (click)="addCart($event,product._id)">ADD TO CART</button>
+
+            <button
+              class="btn btn-primary"
+              (click)="addCart($event, product._id)"
+            >
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>

@@ -20,22 +20,19 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  addCart($event:Event,productId:any){
-    $event.preventDefault()
-    let details={
-      userId:localStorage.getItem('user_id'),
-      productId:productId
-    }
-    
+  addCart($event: Event, productId: any) {
+    $event.preventDefault();
+    let details = {
+      userId: localStorage.getItem('user_id'),
+      productId: productId,
+    };
+
     console.log(details);
-    
-    this.auth.addCart(details).subscribe(res=>{
-      
-      
+
+    this.auth.addCart(details).subscribe((res) => {
       console.log(res);
-      
-    })
-    alert('added successfully')
+    });
+    alert('added successfully');
   }
 
   product: any;

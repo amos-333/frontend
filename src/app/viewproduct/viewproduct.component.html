@@ -1,7 +1,6 @@
-
 <div class="container p-3">
   <div class="row g-3">
-    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
       <table class="table">
         <thead>
           <tr>
@@ -11,25 +10,25 @@
             <th scope="col">company</th>
             <th scope="col">price</th>
             <th scope="col">description</th>
-           
-           
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let i of data ; let indexOfelement=index;" >
-            <th scope="row">{{indexOfelement+1}}</th>
-            <td>{{i.name}}</td>
-            <td>{{i.model}}</td>
-            <td>{{i.company}}</td>
-            <td>{{i.price}}</td>
-            <td>{{i.description}}</td>
-           
-            <td><button (click)="deleteEvent(i._id)" class="btn btn-danger">Delete</button></td>
+          <tr *ngFor="let i of data; let indexOfelement = index">
+            <th scope="row">{{ indexOfelement + 1 }}</th>
+            <td>{{ i.name }}</td>
+            <td>{{ i.model }}</td>
+            <td>{{ i.company }}</td>
+            <td>{{ i.price }}</td>
+            <td>{{ i.description }}</td>
+
+            <td>
+              <button (click)="deleteEvent(i._id)" class="btn btn-danger">
+                Delete
+              </button>
+            </td>
           </tr>
-          
         </tbody>
       </table>
-      
     </div>
   </div>
 </div>

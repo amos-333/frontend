@@ -4,16 +4,17 @@
     <div
       *ngFor="let i of cartData"
       class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3"
-    > 
-        <div class="card" style="width: 18rem">
-          <img src="{{ i.product[0].images }}" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">{{ i.product[0].name }}</h5>
-            <p class="card-text">price:{{ i.product[0].price }}</p>
-            <p class="card-text">quantity:{{ i.quantity }}</p>
-          </div>
+    >
+      <div class="card" style="width: 18rem">
+        <img src="{{ i.product[0].images }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ i.product[0].name }}</h5>
+          <p class="card-text">price:{{ i.product[0].price }}</p>
+          <p class="card-text">quantity:{{ i.quantity }}</p>
         </div>
-        
       </div>
-      <h4>Total:Rs {{ total }}</h4>
-      <button class="btn btn-primary" routerLink="/checkout"> checkout</button>
+    </div>
+    <h4>Total:Rs {{ total }}</h4>
+    <button class="btn btn-primary" routerLink="/checkout">checkout</button>
+  </div>
+</div>
