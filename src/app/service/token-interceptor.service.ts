@@ -16,7 +16,7 @@ export class TokenInterceptorService implements HttpInterceptor {
       // 
       headers: req.headers.set(
         'Authorization',
-        authService.loggedIn() ? authService.loggedIn() : ''
+        authService.loadtoken() ? authService.loadtoken() : ''
       ),
     },
     );

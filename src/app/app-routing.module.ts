@@ -15,6 +15,7 @@ import { UpdatesComponent } from './updates/updates.component';
 import { ViewcarouselComponent } from './viewcarousel/viewcarousel.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { ViewupdatesComponent } from './viewupdates/viewupdates.component';
+import { ManageordersComponent } from './manageorders/manageorders.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +30,7 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       { path: 'products', component: ProductsComponent },
-      { path: 'updates', component: UpdatesComponent },
+      { path: 'manageOrder', component: ManageordersComponent },
       { path: 'carousel', component: CarouselComponent },
       { path: 'viewproduct', component: ViewproductComponent },
       { path: 'viewcarousel', component: ViewcarouselComponent },

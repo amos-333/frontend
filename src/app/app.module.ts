@@ -23,6 +23,7 @@ import { ProductsComponent } from './products/products.component';
 import { OrderplacedComponent } from './orderplaced/orderplaced.component';
 import { AuthService } from './service/auth.service';
 import { TokenInterceptorService } from './service/token-interceptor.service';
+import { ManageordersComponent } from './manageorders/manageorders.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { TokenInterceptorService } from './service/token-interceptor.service';
     CheckoutComponent,
     ProductsComponent,
     OrderplacedComponent,
+    ManageordersComponent,
   ],
   imports: [
     BrowserModule,

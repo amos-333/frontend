@@ -19,6 +19,10 @@ export class AuthService {
   }
 
   // view section
+
+  vieworders = () => {
+    return this.http.get<any>('http://localhost:3000/api/vieworder');
+  };
   viewproducts = () => {
     return this.http.get<any>('http://localhost:3000/api/viewall');
   };
@@ -74,13 +78,23 @@ export class AuthService {
   loggedIn() {
     return !!localStorage.getItem('token_id');
   }
+  loadtoken() {
+    return localStorage.getItem('token_id');
+  }
 
-  getToken(){
-    localStorage.getItem('token_id')
-
+  getToken() {
+    localStorage.getItem('token_id');
   }
 
   isAdmin() {
     return localStorage.getItem('isAdmin') === 'true' ? true : false;
+  }
+
+  //CART QUANTITY ADJUST
+  quantityAdjust(cartAdjust: any) {
+    return this.http.post<any>(
+      'http://localhost:3000/api/cartAdjust',
+      cartAdjust
+    );
   }
 }

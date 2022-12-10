@@ -43,34 +43,13 @@
       <a
         class="btn btn-text-black collapsed"
         data-bs-toggle="collapse"
-        href="#multiCollapseExample4"
         role="button"
         aria-expanded="false"
+        [routerLink]="['manageOrder']" routerLinkActive="router-link-active" 
         aria-controls="multiCollapseExample4"
-        >UPDATES</a
+        >MANAGE ORDERS</a
       >
-      <div
-        class="collapse-horizontal collapse"
-        id="multiCollapseExample4"
-        style=""
-      >
-        <div style="width: 300px">
-          <ul>
-            <a
-              class="dropdown-item"
-              [routerLink]="['updates']"
-              routerLinkActive="router-link-active"
-              >Add updates</a
-            >
-            <a
-              class="dropdown-item"
-              [routerLink]="['viewupdates']"
-              routerLinkActive="router-link-active"
-              >view updates</a
-            >
-          </ul>
-        </div>
-      </div>
+     
       <br />
       <a
         class="btn btn-text-black collapsed"

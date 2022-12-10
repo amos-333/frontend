@@ -8,13 +8,16 @@ import { AuthService } from '../service/auth.service';
 })
 export class CartComponent implements OnInit {
   constructor(private auth: AuthService) {
-    let userId = { userId: localStorage.getItem('user_id') };
-    auth.getCart(userId).subscribe((res) => {
-      console.log(res);
-      this.cartData = res.data;
-    });
+    this.getCartData();
+    if (this.cartData) {
+      this.totalAmount();
+    }
+  }
 
-    auth.totalAmount(userId).subscribe((res) => {
+  //TO GET TOTAL AMOUNT
+  totalAmount() {
+    let userId = { userId: localStorage.getItem('user_id') };
+    this.auth.totalAmount(userId).subscribe((res) => {
       console.log(res);
 
       this.total =
@@ -23,9 +26,31 @@ export class CartComponent implements OnInit {
     });
   }
 
+  //TO GET CART DATA
+  getCartData() {
+    let userId = { userId: localStorage.getItem('user_id') };
+    this.auth.getCart(userId).subscribe((res) => {
+      console.log(res);
+      this.cartData = res.data;
+    });
+  }
+
+  //CART QUANTITY ADJUSTMENT
+  quantityAdjust(incOrDec: any, productId: any) {
+    let value = {
+      user: localStorage.getItem('user_id'),
+      product: productId,
+      value: incOrDec,
+    };
+    this.auth.quantityAdjust(value).subscribe((res) => {
+      this.getCartData();
+      this.totalAmount();
+    });
+  }
+
   cartData: any;
   productData: any;
-  total: any;
+  total: any = 0;
 
   ngOnInit(): void {}
 }

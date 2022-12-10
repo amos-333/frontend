@@ -11,6 +11,34 @@
           <h5 class="card-title">{{ i.product[0].name }}</h5>
           <p class="card-text">price:{{ i.product[0].price }}</p>
           <p class="card-text">quantity:{{ i.quantity }}</p>
+          <div class="row">
+            <div
+              class="col col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-end"
+            >
+              <button
+                [ngClass]="{ disabled: !(i.quantity > 1) }"
+                class="btn btn-secondary"
+                (click)="quantityAdjust('dec', i.productId)"
+              >
+                -
+              </button>
+            </div>
+            <div
+              class="col col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center"
+            >
+              <p>{{ i.quantity }}</p>
+            </div>
+            <div
+              class="col col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-start"
+            >
+              <button
+                class="btn btn-secondary"
+                (click)="quantityAdjust('inc', i.productId)"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
